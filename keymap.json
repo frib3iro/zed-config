@@ -39,4 +39,19 @@
       "ctrl-f6": "debugger::Pause",
     },
   },
+  {
+    "bindings": {
+      "ctrl-alt-o": "snippets::OpenFolder"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-shift-o": "workspace::Open"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-alt-n": "editor::ToggleRelativeLineNumbers"
+    }
+  }
 ]
