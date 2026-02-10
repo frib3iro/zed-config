@@ -1,4 +1,15 @@
 {
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-5",
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+  },
   "vim": {
     "toggle_relative_line_numbers": true,
   },
@@ -52,8 +63,8 @@
     "dark": "Soft Charmed Icons",
   },
 
-  "ui_font_size": 15.0,
-  "buffer_font_size": 15.0,
+  "ui_font_size": 14.0,
+  "buffer_font_size": 14.0,
   "buffer_font_family": "Mononoki Nerd Font Mono",
 
   "project_panel": {
