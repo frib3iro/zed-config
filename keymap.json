@@ -1,43 +1,24 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
 [
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle",  // comentado, mas mantido para referência
-
-      // Executa script Lua normal (CMD externo)
       "f5": ["task::Spawn", { "task_name": "Run Lua Script" }],
-
-      // Executa projeto LÖVE 2D (abre janela do jogo diretamente)
       "f6": ["task::Spawn", { "task_name": "Run Love2D Project" }],
-
-      // Debugger - Rerun (reinicia o debug)
       "ctrl-f5": "debugger::Rerun",
-
-      // Debugger - Continue (continua execução)
-      "ctrl-alt-f5": "debugger::Continue",
-    },
+      "ctrl-alt-f5": "debugger::Continue"
+    }
   },
 
   {
     "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"  // comentado, mas mantido
-    },
+    "bindings": {}
   },
 
   {
     "context": "(Workspace && debugger_stopped)",
     "bindings": {
-      // Pause no debugger (você tinha ctrl-f6 sem contexto específico)
-      "ctrl-f6": "debugger::Pause",
-    },
+      "ctrl-f6": "debugger::Pause"
+    }
   },
   {
     "bindings": {

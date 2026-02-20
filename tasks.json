@@ -4,24 +4,17 @@
     "command": "cmd.exe",
     "args": [
       "/c",
-      "start \"Lua Runner\" cmd /v:on /c \"lua \"$ZED_FILE\" & echo. & echo (program exited with code: !errorlevel!) & echo. & pause\"",
+      "start \"Lua Runner\" cmd /k \"cd /d \"$ZED_DIRNAME\" && lua \"$ZED_FILE\" & echo. & echo (program exited with code: !errorlevel!) & echo.\"",
     ],
-    "shell": {
-      "program": "cmd.exe",
-    },
+    "use_new_terminal": false,
     "reveal": "never",
     "hide": "always",
-    "use_new_terminal": true,
-    "allow_concurrent_runs": true,
   },
-  // ... sua task de Love2D permanece igual
   {
     "label": "Run Love2D Project",
     "command": "love",
-    "args": [
-      "$ZED_WORKTREE_ROOT/Love2d", // <-- força a subpasta Love2d (ajuste se o nome for diferente)
-    ],
-    "cwd": "$ZED_WORKTREE_ROOT/Love2d", // força o diretório de trabalho para Love2d
+    "args": ["$ZED_WORKTREE_ROOT/Love2d"],
+    "cwd": "$ZED_WORKTREE_ROOT/Love2d",
     "reveal": "never",
     "hide": "always",
     "use_new_terminal": false,

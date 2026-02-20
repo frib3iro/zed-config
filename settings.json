@@ -1,45 +1,47 @@
 {
+  "base_keymap": "SublimeText",
+
   "agent": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^lua\\b",
+            },
+          ],
+        },
+      },
     },
-    "favorite_models": [],
-    "model_parameters": [],
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-3-flash-preview",
+    },
   },
+
   "edit_predictions": {
-    "mode": "subtle",
+    "mode": "eager",
   },
+
   "vim": {
     "toggle_relative_line_numbers": true,
   },
-  "always_treat_brackets_as_autoclosed": true,
-  "colorize_brackets": true,
+
   "minimap": {
     "show": "always",
-    "thumb_border": "full",
+    "thumb_border": "left_only",
   },
 
-  "relative_line_numbers": "wrapped",
-  "show_whitespaces": "none",
   "extend_comment_on_newline": false,
 
-  "theme": "One Dark - Darkened",
+  "theme": "One Dark - Orion",
   "theme_overrides": {
-    "theme_overrides": {
+    "One Dark - Orion": {
       "syntax": {
-        "comment": {
-          "font_style": "italic",
-        },
-        "comment.doc": {
-          "font_style": "italic",
-        },
-        "comment.block": {
-          "font_style": "italic",
-        },
-        "comment.block.documentation": {
-          "font_style": "italic",
-        },
+        "comment": { "font_style": "italic" },
+        "comment.doc": { "font_style": "italic" },
+        "comment.block": { "font_style": "italic" },
+        "comment.block.documentation": { "font_style": "italic" },
       },
     },
   },
@@ -52,19 +54,20 @@
     "file_icons": true,
   },
 
-  "autosave": "on_focus_change",
+  "autosave": "on_window_change",
 
   "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 80,
+  "preferred_line_length": 100,
 
   "icon_theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Light Charmed Icons",
     "dark": "Soft Charmed Icons",
   },
 
   "ui_font_size": 14.0,
   "buffer_font_size": 14.0,
+  "agent_ui_font_size": 15.0,
   "buffer_font_family": "Mononoki Nerd Font Mono",
 
   "project_panel": {
@@ -84,6 +87,10 @@
           },
           "diagnostics": {
             "globals": ["love"],
+            "disable": ["missing-fields"],
+          },
+          "hint": {
+            "enable": true,
           },
           "workspace": {
             "checkThirdParty": false,
