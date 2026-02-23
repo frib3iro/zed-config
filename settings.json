@@ -1,6 +1,5 @@
 {
   "base_keymap": "SublimeText",
-
   "agent": {
     "tool_permissions": {
       "tools": {
@@ -18,7 +17,6 @@
       "model": "gemini-3-flash-preview",
     },
   },
-
   "edit_predictions": {
     "mode": "eager",
   },
@@ -58,6 +56,12 @@
 
   "soft_wrap": "preferred_line_length",
   "preferred_line_length": 100,
+  "languages": {
+    "Markdown": {
+      "language_servers": ["markdownlint"],
+      "formatter": "language_server",
+    },
+  },
 
   "icon_theme": {
     "mode": "dark",
@@ -66,9 +70,8 @@
   },
 
   "ui_font_size": 14.0,
-  "buffer_font_size": 14.0,
-  "agent_ui_font_size": 15.0,
-  "buffer_font_family": "Mononoki Nerd Font Mono",
+  "buffer_font_size": 13.0,
+  "agent_ui_font_size": 14.0,
 
   "project_panel": {
     "auto_fold_dirs": false,
@@ -79,11 +82,20 @@
   },
 
   "lsp": {
+    "markdownlint": {
+      "initialization_options": {
+        "config": {
+          "MD013": {
+            "line_length": 100,
+          },
+        },
+      },
+    },
     "lua-language-server": {
       "settings": {
         "Lua": {
           "runtime": {
-            "version": "Lua 5.5",
+            "version": "Lua5.5",
           },
           "diagnostics": {
             "globals": ["love"],
