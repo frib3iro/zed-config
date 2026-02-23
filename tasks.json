@@ -4,7 +4,7 @@
     "command": "cmd.exe",
     "args": [
       "/c",
-      "start \"Lua Runner\" cmd /v:on /c \"cd /d \"$ZED_DIRNAME\" && lua \"$ZED_FILE\" & echo. & echo (O programa foi encerrado com o código: !errorlevel!) & echo. & pause\"",
+      "start \"Lua Runner\" cmd /c \"cd /d \"$ZED_DIRNAME\" && lua \"$ZED_FILE\" & echo. & pause\"",
     ],
     "use_new_terminal": false,
     "reveal": "never",
