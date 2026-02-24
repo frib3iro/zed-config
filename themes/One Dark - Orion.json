@@ -54,7 +54,7 @@
         "editor.background": "#101216ff",
         "editor.gutter.background": "#101216ff",
         "editor.subheader.background": "#1d2127",
-        "editor.active_line.background": "#161a20",
+        "editor.active_line.background": "#1C1E24",
         "editor.highlighted_line.background": "#262a32ff",
         "editor.line_number": "#dadde259",
         "editor.active_line_number": "#74ADE8",
@@ -758,5 +758,5 @@
       }
     }
   ],
-  "id": "Mxg2QbVF-q5lWzdDL78wj"
+  "id": "Y7Y8b8yuXBjjqBl3JFAdy"
 }

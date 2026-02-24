@@ -1,36 +1,13 @@
 {
   "base_keymap": "SublimeText",
-  "agent": {
-    "tool_permissions": {
-      "tools": {
-        "terminal": {
-          "always_allow": [
-            {
-              "pattern": "^lua\\b",
-            },
-          ],
-        },
-      },
-    },
-    "default_model": {
-      "provider": "google",
-      "model": "gemini-3-flash-preview",
-    },
-  },
-  "edit_predictions": {
-    "mode": "eager",
-  },
-
-  "vim": {
-    "toggle_relative_line_numbers": true,
-  },
-
-  "minimap": {
-    "show": "always",
-    "thumb_border": "left_only",
-  },
-
+  "autosave": "on_window_change",
   "extend_comment_on_newline": false,
+
+  "buffer_font_family": "Mononoki Nerd Font Mono",
+  "ui_font_size": 14.0,
+  "buffer_font_size": 13.0,
+  "agent_ui_font_size": 14.0,
+  "agent_buffer_font_size": 11.0,
 
   "theme": "One Dark - Orion",
   "theme_overrides": {
@@ -43,35 +20,30 @@
       },
     },
   },
-
-  "toolbar": {
-    "breadcrumbs": false,
-  },
-
-  "tabs": {
-    "file_icons": true,
-  },
-
-  "autosave": "on_window_change",
-
-  "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 100,
-  "languages": {
-    "Markdown": {
-      "language_servers": ["markdownlint"],
-      "formatter": "language_server",
-    },
-  },
-
   "icon_theme": {
     "mode": "dark",
     "light": "Light Charmed Icons",
     "dark": "Soft Charmed Icons",
   },
+  "minimap": {
+    "show": "always",
+    "thumb_border": "left_only",
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+  },
+  "tabs": {
+    "file_icons": true,
+  },
 
-  "ui_font_size": 14.0,
-  "buffer_font_size": 13.0,
-  "agent_ui_font_size": 14.0,
+  "soft_wrap": "preferred_line_length",
+  "preferred_line_length": 100,
+  "vim": {
+    "toggle_relative_line_numbers": true,
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+  },
 
   "project_panel": {
     "auto_fold_dirs": false,
@@ -81,7 +53,22 @@
     },
   },
 
+  "languages": {
+    "Markdown": {
+      "language_servers": ["markdownlint"],
+      "formatter": "language_server",
+    },
+  },
   "lsp": {
+    "json-language-server": {
+      "settings": {
+        "json": {
+          "validate": {
+            "enable": false,
+          },
+        },
+      },
+    },
     "markdownlint": {
       "initialization_options": {
         "config": {
@@ -95,7 +82,7 @@
       "settings": {
         "Lua": {
           "runtime": {
-            "version": "Lua5.5",
+            "version": "Lua 5.5",
           },
           "diagnostics": {
             "globals": ["love"],
@@ -108,6 +95,24 @@
             "checkThirdParty": false,
             "library": ["${3rd}/love2d/library"],
           },
+        },
+      },
+    },
+  },
+
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-3-flash-preview",
+    },
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            {
+              "pattern": "^lua\\b",
+            },
+          ],
         },
       },
     },
