@@ -2,37 +2,30 @@
   {
     "context": "Workspace",
     "bindings": {
-      "f5": ["task::Spawn", { "task_name": "Run Lua Script" }],
-      "f6": ["task::Spawn", { "task_name": "Run Love2D Project" }],
-      "ctrl-f5": "debugger::Rerun",
-      "ctrl-alt-f5": "debugger::Continue"
+      "f5": ["task::Spawn", { "task_name": "Compilar e Rodar C/C++" }],
+      "f7": "debugger::Start",
+      "shift-f7": "debugger::Stop",
+      "ctrl-f7": "debugger::Rerun",
+      "f8": "debugger::Continue",
+      "f9": "editor::ToggleBreakpoint",
+      "f10": "debugger::StepOver",
+      "f11": "debugger::StepInto",
+      "shift-f11": "debugger::StepOut",
+      "alt-o": "editor::SwitchSourceHeader",
+      "ctrl-alt-o": "snippets::OpenFolder",
+      "ctrl-shift-o": "workspace::Open",
+      "ctrl-shift-e": "project_panel::ToggleFocus",
+      "ctrl-alt-n": "editor::ToggleRelativeLineNumbers"
     }
   },
-
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-f": "editor::Format"
+    }
+  },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {}
-  },
-
-  {
-    "context": "(Workspace && debugger_stopped)",
-    "bindings": {
-      "ctrl-f6": "debugger::Pause"
-    }
-  },
-  {
-    "bindings": {
-      "ctrl-alt-o": "snippets::OpenFolder"
-    }
-  },
-  {
-    "bindings": {
-      "ctrl-shift-o": "workspace::Open"
-    }
-  },
-  {
-    "bindings": {
-      "ctrl-alt-n": "editor::ToggleRelativeLineNumbers"
-    }
   }
 ]

@@ -1,23 +1,12 @@
 [
   {
-    "label": "Run Lua Script",
-    "command": "cmd.exe",
+    "label": "Compilar e Rodar C/C++",
+    "command": "powershell",
     "args": [
-      "/c",
-      "start \"Lua Runner\" cmd /c \"cd /d \"$ZED_DIRNAME\" && lua \"$ZED_FILE\" & echo. & pause\""
+      "-Command",
+      "g++ -std=c++20 -g3 -Wall -Wextra -Wpedantic \"$ZED_FILE\" -o \"$ZED_DIRNAME\\$ZED_STEM.exe\"; if ($LASTEXITCODE -eq 0) { Start-Process cmd.exe -ArgumentList '/c', \"`\"$ZED_DIRNAME\\$ZED_STEM.exe`\" & echo. & pause\" }"
     ],
-    "use_new_terminal": false,
     "reveal": "never",
     "hide": "always"
-  },
-  {
-    "label": "Run Love2D Project",
-    "command": "love",
-    "args": ["$ZED_WORKTREE_ROOT/Love2d"],
-    "cwd": "$ZED_WORKTREE_ROOT/Love2d",
-    "reveal": "never",
-    "hide": "always",
-    "use_new_terminal": false,
-    "allow_concurrent_runs": true
   }
 ]
