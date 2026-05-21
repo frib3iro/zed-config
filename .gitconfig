@@ -1,0 +1,7 @@
+[user]
+	name = Fabio
+	email = rib3iro@live.com
+[init]
+	defaultBranch = main
+[safe]
+	directory = D:/Documents/Projects
