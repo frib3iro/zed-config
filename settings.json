@@ -1,6 +1,7 @@
 {
+	"cli_default_open_behavior": "existing_window",
 	"ui_font_weight": 400.0,
- "hard_tabs": true,
+	"hard_tabs": true,
 	"agent_servers": {
 		"claude-acp": {
 			"type": "registry"
@@ -122,19 +123,20 @@
 					}
 				}
 			}
-		},
-		"clangd": {
-			"binary": {
-				"path": "C:\\clangd_22.1.0\\bin\\clangd.exe",
-				"arguments": [
-					"--background-index",
-					"--clang-tidy",
-					"--completion-style=detailed",
-					"--header-insertion=iwyu",
-					"--pch-storage=memory",
-					"--function-arg-placeholders=0"
-				]
-			}
+		}
+	},
+	"clangd": {
+		"binary": {
+			"path": "C:\\Users\\Fabio\\AppData\\Local\\Zed\\languages\\clangd\\clangd_22.1.0\\bin\\clangd.exe",
+			"arguments": [
+				"--background-index",
+				"--clang-tidy",
+				"--completion-style=detailed",
+				"--header-insertion=iwyu",
+				"--pch-storage=memory",
+				"--function-arg-placeholders=0",
+				"--query-driver=C:/mingw64/bin/g++.exe"
+			]
 		}
 	},
 	"language_models": {
@@ -144,12 +146,13 @@
 	},
 	"agent": {
 		"default_profile": "write",
-  "flexible": true,
+		"flexible": true,
 		"dock": "right",
 		"system_prompt": "Sempre responda em português brasileiro (pt-BR), independente do idioma da pergunta. Sempre formate código usando blocos markdown com a linguagem correta (```cpp, ```c, ```python, etc). Nunca escreva código sem a tag de linguagem.",
 		"default_model": {
-			"provider": "ollama",
-			"model": "qwen3:14b",
+			"effort": "high",
+			"provider": "anthropic",
+			"model": "claude-sonnet-4-6",
 			"enable_thinking": true
 		},
 		"favorite_models": [
