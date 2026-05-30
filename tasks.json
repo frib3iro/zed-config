@@ -8,5 +8,15 @@
     ],
     "reveal": "never",
     "hide": "always"
+  },
+  {
+    "label": "Compilar e Rodar C/C++ (Win32 GUI)",
+    "command": "powershell",
+    "args": [
+      "-Command",
+      "g++ -std=c++20 -municode -mwindows -g3 -Wall -Wextra -Wpedantic \"$ZED_FILE\" -o \"$ZED_DIRNAME\\$ZED_STEM.exe\" -lcomctl32 -ladvapi32 -lshlwapi -lshell32 -lole32 -lgdi32 -luser32; if ($LASTEXITCODE -eq 0) { Start-Process \"$ZED_DIRNAME\\$ZED_STEM.exe\" }"
+    ],
+    "reveal": "on_failure",
+    "hide": "on_success"
   }
 ]

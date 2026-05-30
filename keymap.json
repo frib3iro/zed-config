@@ -1,31 +1,41 @@
 [
-  {
-    "context": "Workspace",
-    "bindings": {
-      "f5": ["task::Spawn", { "task_name": "Compilar e Rodar C/C++" }],
-      "f7": "debugger::Start",
-      "shift-f7": "debugger::Stop",
-      "ctrl-f7": "debugger::Rerun",
-      "f8": "debugger::Continue",
-      "f9": "editor::ToggleBreakpoint",
-      "f10": "debugger::StepOver",
-      "f11": "debugger::StepInto",
-      "shift-f11": "debugger::StepOut",
-      "alt-o": "editor::SwitchSourceHeader",
-      "ctrl-alt-o": "snippets::OpenFolder",
-      "ctrl-shift-o": "workspace::Open",
-      "ctrl-shift-e": "project_panel::ToggleFocus",
-      "ctrl-alt-n": "editor::ToggleRelativeLineNumbers"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "ctrl-shift-f": "editor::Format"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {}
-  }
+	{
+		"context": "Workspace",
+		"bindings": {
+			"f5": ["task::Spawn", { "task_name": "Compilar e Rodar C/C++" }],
+			"shift-f5": ["task::Spawn", { "task_name": "Compilar e Rodar C/C++ (Win32 GUI)" }],
+			"f7": "debugger::Start",
+			"shift-f7": "debugger::Stop",
+			"ctrl-f7": "debugger::Rerun",
+			"f8": "debugger::Continue",
+			"f9": "editor::ToggleBreakpoint",
+			"f10": "debugger::StepOver",
+			"f11": "debugger::StepInto",
+			"shift-f11": "debugger::StepOut",
+			"alt-o": "editor::SwitchSourceHeader",
+			"ctrl-alt-o": "snippets::OpenFolder",
+			"ctrl-shift-o": "workspace::Open",
+			"ctrl-shift-e": "project_panel::ToggleFocus",
+			"ctrl-alt-n": "editor::ToggleRelativeLineNumbers"
+		}
+	},
+
+	{
+		"context": "Editor",
+		"bindings": {
+			"ctrl-alt-f": "editor::Format"
+		}
+	},
+
+	{
+		"context": "Editor && vim_mode == insert",
+		"bindings": {}
+	},
+
+	{
+		"context": "Editor && mode == full",
+		"bindings": {
+			"ctrl-alt-n": "editor::ToggleRelativeLineNumbers"
+		}
+	}
 ]
