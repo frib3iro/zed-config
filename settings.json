@@ -1,6 +1,6 @@
 {
 	"auto_indent": "preserve_indent",
- "cli_default_open_behavior": "existing_window",
+	"cli_default_open_behavior": "existing_window",
 	"base_keymap": "SublimeText",
 	"theme": "One Dark - Orion",
 	"theme_overrides": {
@@ -16,7 +16,7 @@
 	"icon_theme": {
 		"mode": "dark",
 		"light": "Light Charmed Icons",
-		"dark": "Soft Charmed Icons"
+		"dark": "Warm Charmed Icons"
 	},
 	"ui_font_size": 14.0,
 	"ui_font_weight": 400.0,
@@ -102,7 +102,6 @@
 			}
 		}
 	},
-
 	"language_models": {
 		"openai": {
 			"api_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
@@ -113,7 +112,11 @@
 					"display_name": "Qwen Plus",
 					"max_tokens": 32768
 				},
-				{ "name": "qwen-max", "display_name": "Qwen Max", "max_tokens": 32768 },
+				{
+					"name": "qwen-max",
+					"display_name": "Qwen Max",
+					"max_tokens": 32768
+				},
 				{
 					"name": "qwen-turbo",
 					"display_name": "Qwen Turbo",
@@ -136,19 +139,14 @@
 			]
 		}
 	},
-
 	"agent_servers": {
-		"qwen-code": { "type": "registry" },
-		"codex-acp": { "type": "registry" },
-		"claude-acp": { "type": "registry" }
+		"qwen-code": { "type": "registry" }
 	},
-
 	"agent": {
 		"default_profile": "ask",
 		"flexible": true,
 		"dock": "right",
 		"system_prompt": "REGRA INEGOCIÁVEL: Você é um Engenheiro de Software Sênior brasileiro. TODAS as suas respostas, explicações e comentários dentro do código DEVEM ser estritamente em Português do Brasil (pt-BR). Nunca responda em inglês, mesmo que a pergunta seja em inglês. Formate o código em blocos markdown.",
-
 		"favorite_models": [
 			{
 				"provider": "openai",
@@ -177,7 +175,6 @@
 			}
 		}
 	},
-
 	"telemetry": { "diagnostics": false, "metrics": false },
 	"debugger": {
 		"log_dap_communications": true,

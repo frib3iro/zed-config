@@ -1,0 +1,191 @@
+{
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "auto_indent": "preserve_indent",
+  "cli_default_open_behavior": "existing_window",
+  "base_keymap": "SublimeText",
+  "theme": "One Dark - Orion",
+  "theme_overrides": {
+    "One Dark - Orion": {
+      "syntax": {
+        "comment": { "font_style": "italic" },
+        "comment.doc": { "font_style": "italic" },
+        "comment.block": { "font_style": "italic" },
+        "comment.block.documentation": { "font_style": "italic" }
+      }
+    }
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Light Charmed Icons",
+    "dark": "Warm Charmed Icons"
+  },
+  "ui_font_size": 14.0,
+  "ui_font_weight": 400.0,
+  "buffer_font_family": "Mononoki Nerd Font Mono",
+  "buffer_font_size": 15.0,
+  "buffer_font_weight": 500.0,
+  "buffer_line_height": "comfortable",
+  "agent_ui_font_size": 16.0,
+  "agent_buffer_font_size": 12.0,
+  "outline_panel": { "dock": "right" },
+  "collaboration_panel": { "dock": "right" },
+  "git_panel": { "dock": "left", "tree_view": true },
+  "project_panel": {
+    "dock": "left",
+    "auto_fold_dirs": false,
+    "hide_gitignore": true,
+    "sticky_scroll": false,
+    "scrollbar": { "show": "never" }
+  },
+  "toolbar": { "breadcrumbs": false },
+  "tabs": { "file_icons": true },
+  "minimap": { "show": "always", "thumb_border": "left_only" },
+  "indent_guides": { "enabled": false, "coloring": "indent_aware" },
+  "show_wrap_guides": true,
+  "hard_tabs": true,
+  "tab_size": 4,
+  "soft_wrap": "bounded",
+  "preferred_line_length": 80,
+  "wrap_guides": [80],
+  "autosave": "on_window_change",
+  "extend_comment_on_newline": false,
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "edit_predictions": { "mode": "subtle" },
+  "inlay_hints": { "enabled": true, "show_parameter_hints": false },
+  "vim": { "toggle_relative_line_numbers": true },
+  "file_scan_exclusions": ["**/*.exe", "**/*.obj", "**/*.o"],
+  "file_types": {
+    "G-code": ["cnc", "nc", "gcode", "gcd", "tap"]
+  },
+  "languages": {
+    "G-code": { "tab_size": 4 },
+    "Markdown": {
+      "language_servers": ["markdownlint"],
+      "formatter": "language_server"
+    },
+    "C": {
+      "format_on_save": "on",
+      "tab_size": 4,
+      "hard_tabs": true,
+      "formatter": "language_server"
+    },
+    "C++": {
+      "format_on_save": "on",
+      "tab_size": 4,
+      "hard_tabs": true,
+      "formatter": "language_server"
+    }
+  },
+  "lsp": {
+    "json-language-server": {
+      "settings": {
+        "json": { "validate": { "enable": true } }
+      }
+    },
+    "clangd": {
+      "binary": {
+        "path": "C:\\Users\\Fabio\\AppData\\Local\\Zed\\languages\\clangd\\clangd_22.1.0\\bin\\clangd.exe",
+        "arguments": [
+          "--background-index",
+          "--clang-tidy",
+          "--completion-style=detailed",
+          "--header-insertion=iwyu",
+          "--pch-storage=memory",
+          "--function-arg-placeholders=0",
+          "--query-driver=C:/mingw64/bin/g++.exe"
+        ]
+      }
+    },
+    "markdownlint": {
+      "initialization_options": {
+        "config": { "MD013": { "line_length": 80 } }
+      }
+    }
+  },
+
+  "language_models": {
+    "openai": {
+      "api_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+      "api_key": "${env:DASHSCOPE_API_KEY}",
+      "available_models": [
+        {
+          "name": "qwen-plus",
+          "display_name": "Qwen Plus",
+          "max_tokens": 32768
+        },
+        { "name": "qwen-max", "display_name": "Qwen Max", "max_tokens": 32768 },
+        {
+          "name": "qwen-turbo",
+          "display_name": "Qwen Turbo",
+          "max_tokens": 32768
+        }
+      ]
+    },
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "context_window": 32768,
+      "available_models": [
+        {
+          "name": "qwen3.6:latest",
+          "display_name": "Qwen 3.6 (Local)",
+          "max_tokens": 32768,
+          "supports_tools": true,
+          "supports_thinking": false,
+          "supports_images": false
+        }
+      ]
+    }
+  },
+
+  "agent_servers": {
+    "qwen-code": { "type": "registry" },
+    "codex-acp": { "type": "registry" },
+    "claude-acp": { "type": "registry" }
+  },
+
+  "agent": {
+    "default_profile": "ask",
+    "flexible": true,
+    "dock": "right",
+    "system_prompt": "REGRA INEGOCIÁVEL: Você é um Engenheiro de Software Sênior brasileiro. TODAS as suas respostas, explicações e comentários dentro do código DEVEM ser estritamente em Português do Brasil (pt-BR). Nunca responda em inglês, mesmo que a pergunta seja em inglês. Formate o código em blocos markdown.",
+
+    "favorite_models": [
+      {
+        "provider": "openai",
+        "model": "qwen-plus",
+        "display_name": "Qwen Plus (API)",
+        "enable_thinking": false
+      },
+      {
+        "provider": "ollama",
+        "model": "qwen3.6:latest",
+        "display_name": "Qwen 3.6 (Local)",
+        "enable_thinking": false
+      }
+    ],
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "always_allow": [
+            { "pattern": "^cmake\\b" },
+            { "pattern": "^make\\b" },
+            { "pattern": "^clang\\b" },
+            { "pattern": "^clang\\+\\+\\b" },
+            { "pattern": "^ninja\\b" }
+          ]
+        }
+      }
+    }
+  },
+
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "debugger": {
+    "log_dap_communications": true,
+    "format_dap_log_messages": true
+  }
+}
