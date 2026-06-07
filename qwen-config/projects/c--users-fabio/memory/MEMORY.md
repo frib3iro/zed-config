@@ -1,0 +1,1 @@
+- [User Role and Environment](user/user_role.md) — Information about the user's role, environment, and operating system.

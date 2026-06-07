@@ -1,5 +1,6 @@
 {
-	"cli_default_open_behavior": "existing_window",
+	"auto_indent": "preserve_indent",
+ "cli_default_open_behavior": "existing_window",
 	"base_keymap": "SublimeText",
 	"theme": "One Dark - Orion",
 	"theme_overrides": {
@@ -41,6 +42,7 @@
 	"indent_guides": { "enabled": false, "coloring": "indent_aware" },
 	"show_wrap_guides": true,
 	"hard_tabs": true,
+	"tab_size": 4,
 	"soft_wrap": "bounded",
 	"preferred_line_length": 80,
 	"wrap_guides": [80],
@@ -64,11 +66,13 @@
 		"C": {
 			"format_on_save": "on",
 			"tab_size": 4,
+			"hard_tabs": true,
 			"formatter": "language_server"
 		},
 		"C++": {
 			"format_on_save": "on",
 			"tab_size": 4,
+			"hard_tabs": true,
 			"formatter": "language_server"
 		}
 	},
@@ -98,6 +102,7 @@
 			}
 		}
 	},
+
 	"language_models": {
 		"openai": {
 			"api_url": "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
@@ -131,25 +136,19 @@
 			]
 		}
 	},
+
 	"agent_servers": {
 		"qwen-code": { "type": "registry" },
-		"codex-acp": {
-			"type": "registry",
-			"favorite_config_option_values": { "model": ["gpt-5.3-codex"] }
-		},
+		"codex-acp": { "type": "registry" },
 		"claude-acp": { "type": "registry" }
 	},
+
 	"agent": {
 		"default_profile": "ask",
 		"flexible": true,
 		"dock": "right",
 		"system_prompt": "REGRA INEGOCIÁVEL: Você é um Engenheiro de Software Sênior brasileiro. TODAS as suas respostas, explicações e comentários dentro do código DEVEM ser estritamente em Português do Brasil (pt-BR). Nunca responda em inglês, mesmo que a pergunta seja em inglês. Formate o código em blocos markdown.",
-		"default_model": {
-			"effort": "medium",
-			"provider": "openai",
-			"model": "qwen-plus",
-			"enable_thinking": false
-		},
+
 		"favorite_models": [
 			{
 				"provider": "openai",
@@ -162,17 +161,6 @@
 				"model": "qwen3.6:latest",
 				"display_name": "Qwen 3.6 (Local)",
 				"enable_thinking": false
-			},
-			{
-				"provider": "anthropic",
-				"model": "claude-haiku-4-5-20251001",
-				"enable_thinking": false
-			},
-			{
-				"provider": "anthropic",
-				"model": "claude-sonnet-4-6",
-				"enable_thinking": true,
-				"effort": "high"
 			}
 		],
 		"tool_permissions": {
@@ -189,6 +177,7 @@
 			}
 		}
 	},
+
 	"telemetry": { "diagnostics": false, "metrics": false },
 	"debugger": {
 		"log_dap_communications": true,

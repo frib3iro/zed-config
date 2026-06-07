@@ -1,0 +1,2 @@
+- [Operating System](user/operating_system.md) — The user's operating system is win32.
+- [API Key Configuration](project/api_key_configuration.md) — The project uses the DASHSCOPE_API_KEY environment variable for API key.
